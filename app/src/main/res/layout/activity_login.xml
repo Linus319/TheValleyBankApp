@@ -62,4 +62,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Log In" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home" />
+
 </LinearLayout>

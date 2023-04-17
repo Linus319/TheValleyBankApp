@@ -123,13 +123,13 @@ public class CreateAccountActivity extends AppCompatActivity {
             // add user to account manager
             MainActivity.AM.addUser(newUser);
 
-            confirmUserIntent.putExtra("com.example.thevalleybankapp.newEmail", newEmail);
-            confirmUserIntent.putExtra("com.example.thevalleybankapp.newPassword", newPassword);
-            confirmUserIntent.putExtra("com.example.thevalleybankapp.newPhone", newPhone);
+//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newEmail", newEmail);
+//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newPassword", newPassword);
+//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newPhone", newPhone);
             confirmUserIntent.putExtra("com.example.thevalleybankapp.newFirstName", newFirstName);
-            confirmUserIntent.putExtra("com.example.thevalleybankapp.newLastName", newLastName);
-            confirmUserIntent.putExtra("com.example.thevalleybankapp.newDOB", newDOB);
-            confirmUserIntent.putExtra("com.example.thevalleybankapp.newZip", newZip);
+//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newLastName", newLastName);
+//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newDOB", newDOB);
+//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newZip", newZip);
 
             startActivity(confirmUserIntent);
         });
