@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="12dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/DarkOrange">
 
     <TextView
         android:id="@+id/sendRequestText"
@@ -14,7 +15,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <TextView
         android:id="@+id/promptUserEmail"
@@ -30,7 +32,8 @@
         android:layout_height="48dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/orText"
@@ -55,7 +58,8 @@
         android:layout_height="48dp"
         android:ems="10"
         android:hint="Phone #"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:background="@color/white"/>
 
     <Space
         android:layout_width="match_parent"
@@ -74,6 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:ems="10"
+        android:background="@color/white"
         android:gravity="start|top"
         android:hint="Maximum 200 characters."
         android:inputType="textMultiLine" />
@@ -88,11 +93,13 @@
         android:layout_height="wrap_content"
         android:text="Send or Receive?"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        />
 
     <Spinner
         android:id="@+id/chooseSendReceive"
         android:layout_width="match_parent"
-        android:layout_height="48dp" />
+        android:layout_height="166dp"
+        android:background="@color/white" />
 
 </LinearLayout>

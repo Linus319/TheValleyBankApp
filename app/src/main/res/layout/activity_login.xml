@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginHorizontal="12dp">
-
+    android:layout_marginHorizontal="12dp"
+    android:background="@color/DarkOrange">
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="48dp" />
+        android:layout_marginVertical="48dp"
+        android:background="@color/DarkGreen" />
 
     <TextView
         android:id="@+id/loginView"
@@ -18,7 +19,8 @@
         android:text="Login Screen"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:background="@color/DarkGreen"/>
 
     <TextView
         android:id="@+id/userText"
@@ -27,7 +29,8 @@
         android:layout_marginVertical="6dp"
         android:text="Username:"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:background="@color/DarkGreen"/>
 
     <EditText
         android:id="@+id/enterUsername"
@@ -37,7 +40,8 @@
         android:autoText="false"
         android:ems="10"
         android:hint="Enter email address"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/passText"
@@ -46,7 +50,8 @@
         android:layout_marginVertical="6dp"
         android:text="Password:"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:background="@color/DarkGreen"/>
 
     <EditText
         android:id="@+id/enterPassword"
@@ -55,18 +60,23 @@
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="Enter password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:background="@color/white"/>
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Log In" />
+        android:text="Log In"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/DarkGreen"/>
 
     <Button
         android:id="@+id/homeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home" />
+        android:textColor="@color/black"
+        android:text="Home"
+        android:backgroundTint="@color/DarkGreen"/>
 
 </LinearLayout>
