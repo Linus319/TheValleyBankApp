@@ -27,5 +27,6 @@
         android:id="@+id/svConfirmGoBackButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back To Account Home" />
+        android:text="Back To Account" />
+
 </LinearLayout>

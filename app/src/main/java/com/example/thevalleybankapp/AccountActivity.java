@@ -14,17 +14,16 @@ public class AccountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
-        Button signOutButton = (Button) findViewById(R.id.signOutButton);
-        Button bCheckingDeposit = (Button) findViewById(R.id.checkingDeposit);
-        Button bSavingsDeposit = (Button) findViewById(R.id.savingsDeposit);
+        Button signOutButton = findViewById(R.id.signOutButton);
+        Button bCheckingDeposit = findViewById(R.id.checkingDeposit);
+        Button bSavingsDeposit = findViewById(R.id.savingsDeposit);
 ;
         Intent thisIntent = getIntent();
-
         String email = thisIntent.getStringExtra("com.example.thevalleybankapp.accountEmail");
 
-        TextView welcomeText = (TextView) findViewById(R.id.accountWelcome);
-        TextView checkingBalance = (TextView) findViewById(R.id.checkingBalance);
-        TextView savingsBalance = (TextView) findViewById(R.id.savingsBalance);
+        TextView welcomeText = findViewById(R.id.accountWelcome);
+        TextView checkingBalance = findViewById(R.id.checkingBalance);
+        TextView savingsBalance = findViewById(R.id.savingsBalance);
 
         welcomeText.setText("Welcome, " + MainActivity.AM.getFirstName(email)+ "!");
         checkingBalance.setText(MainActivity.AM.getCheckingBalance(email));
@@ -44,6 +43,7 @@ public class AccountActivity extends AppCompatActivity {
         });
 
         bSavingsDeposit.setOnClickListener(v -> {
+            depositSavingsIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
             startActivity(depositSavingsIntent);
         });
     }

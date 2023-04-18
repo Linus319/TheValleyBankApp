@@ -24,8 +24,9 @@
         android:layout_height="24dp" />
 
     <Button
-        android:id="@+id/svConfirmGoBackButton"
+        android:id="@+id/chConfirmGoBackButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back To Account Home" />
+        android:text="Back To Account" />
+
 </LinearLayout>
