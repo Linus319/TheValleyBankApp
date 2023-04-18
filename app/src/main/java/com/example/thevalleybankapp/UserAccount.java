@@ -29,11 +29,9 @@ public class UserAccount {
     public String getEmail() {
         return email;
     }
-
     public String getPassword() {
         return password;
     }
-
     public String getFirstName() {
         return firstName;
     }
@@ -46,5 +44,13 @@ public class UserAccount {
     public String getSavingsBalance() {
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         return formatter.format(savingsBalance);
+    }
+
+    public void depositChecking(double deposit) {
+        checkingBalance += deposit;
+    }
+
+    public void depositSavings(double deposit) {
+        savingsBalance += deposit;
     }
 }

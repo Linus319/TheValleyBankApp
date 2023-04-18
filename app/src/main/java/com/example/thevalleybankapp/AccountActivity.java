@@ -15,6 +15,8 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         Button signOutButton = (Button) findViewById(R.id.signOutButton);
+        Button bCheckingDeposit = (Button) findViewById(R.id.checkingDeposit);
+        Button bSavingsDeposit = (Button) findViewById(R.id.savingsDeposit);
 ;
         Intent thisIntent = getIntent();
 
@@ -29,9 +31,20 @@ public class AccountActivity extends AppCompatActivity {
         savingsBalance.setText(MainActivity.AM.getSavingsBalance(email));
 
         Intent logOutIntent = new Intent(this, MainActivity.class);
+        Intent depositCheckingIntent = new Intent(this, CheckingDepositActivity.class);
+        Intent depositSavingsIntent = new Intent(this, SavingsDepositActivity.class);
 
         signOutButton.setOnClickListener(v -> {
             startActivity(logOutIntent);
+        });
+
+        bCheckingDeposit.setOnClickListener(v -> {
+            depositCheckingIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+            startActivity(depositCheckingIntent);
+        });
+
+        bSavingsDeposit.setOnClickListener(v -> {
+            startActivity(depositSavingsIntent);
         });
     }
 }

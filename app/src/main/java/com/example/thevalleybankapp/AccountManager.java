@@ -57,4 +57,32 @@ public class AccountManager {
         }
         return "";
     }
+
+    // FIX ME!!! -- bad worst case runtime, should replace with a HashMap of <email, ArrayList index>
+    public void depositChecking(String email, double amount) {
+        for (UserAccount user : accountList) {
+            if (user.getEmail().equals(email)) {
+                user.depositChecking(amount);
+            }
+        }
+    }
+
+    // FIX ME!!! -- bad worst case runtime, should replace with a HashMap of <email, ArrayList index>
+    public void depositSavings(String email, double amount) {
+        for (UserAccount user : accountList) {
+            if (user.getEmail().equals(email)) {
+                user.depositSavings(amount);
+            }
+        }
+    }
+
+    // FIX ME!!! -- Replace for loop with HashMap<email, ArrayList index>
+    public UserAccount getUser(String email) {
+        for (UserAccount user : accountList) {
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }
