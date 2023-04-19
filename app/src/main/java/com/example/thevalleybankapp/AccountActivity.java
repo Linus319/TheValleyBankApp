@@ -17,7 +17,7 @@ public class AccountActivity extends AppCompatActivity {
         Button signOutButton = findViewById(R.id.signOutButton);
         Button bCheckingDeposit = findViewById(R.id.checkingDeposit);
         Button bSavingsDeposit = findViewById(R.id.savingsDeposit);
-;
+
         Intent thisIntent = getIntent();
         String email = thisIntent.getStringExtra("com.example.thevalleybankapp.accountEmail");
 

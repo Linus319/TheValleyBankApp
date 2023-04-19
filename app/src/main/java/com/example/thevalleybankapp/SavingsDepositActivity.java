@@ -60,10 +60,7 @@ public class SavingsDepositActivity extends AppCompatActivity {
         svDepositText.addTextChangedListener(textWatcher);
 
         svDeposit.setOnClickListener(v -> {
-            if (svDepositText.getText().toString().equals("")) {
-                // do nothing
-            }
-            else {
+            if (!svDepositText.getText().toString().equals("")) { // if amount isn't empty
                 double deposit = Double.parseDouble(svDepositText.getText().toString());
                 MainActivity.AM.depositSavings(email, deposit);
             }

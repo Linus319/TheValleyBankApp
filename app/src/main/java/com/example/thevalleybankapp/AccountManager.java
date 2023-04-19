@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class AccountManager {
     private ArrayList<UserAccount> accountList = new ArrayList<UserAccount>();
     private HashMap<String, String> validationMap = new HashMap<String, String>(); // <email, password>
+    private HashMap<String, Integer> indexMap = new HashMap<>(); // <email, accountList[index]>
 
     public AccountManager() {
         // default constructor
@@ -15,7 +16,9 @@ public class AccountManager {
         String email = newUser.getEmail();
         String password = newUser.getPassword();
 
-        validationMap.put(email, password);
+        validationMap.put(email, password); // store association: (key, value) = (email, password)
+
+        indexMap.put(email, accountList.size()); // store association (key, value) = (email, index (of accountList))
 
         accountList.add(newUser);
     }
@@ -28,61 +31,33 @@ public class AccountManager {
         return validationMap.get(email);
     }
 
-    // FIX ME!!! -- bad worst case runtime, should replace with a HashMap of <email, ArrayList index>
     public String getFirstName(String email) {
-        for (UserAccount user : accountList) {
-            if (user.getEmail().equals(email)) {
-                return user.getFirstName();
-            }
-        }
-        return "";
+        UserAccount u = accountList.get(indexMap.get(email));
+        return u.getFirstName();
     }
 
-    // FIX ME!!! -- bad worst case runtime, should replace with a HashMap of <email, ArrayList index>
     public String getCheckingBalance(String email) {
-        for (UserAccount user : accountList) {
-            if (user.getEmail().equals(email)) {
-                return user.getCheckingBalance();
-            }
-        }
-        return "";
+        UserAccount u = accountList.get(indexMap.get(email));
+        return u.getCheckingBalance();
     }
 
-    // FIX ME!!! -- bad worst case runtime, should replace with a HashMap of <email, ArrayList index>
     public String getSavingsBalance(String email) {
-        for (UserAccount user : accountList) {
-            if (user.getEmail().equals(email)) {
-                return user.getSavingsBalance();
-            }
-        }
-        return "";
+        UserAccount u = accountList.get(indexMap.get(email));
+        return u.getSavingsBalance();
     }
 
-    // FIX ME!!! -- bad worst case runtime, should replace with a HashMap of <email, ArrayList index>
     public void depositChecking(String email, double amount) {
-        for (UserAccount user : accountList) {
-            if (user.getEmail().equals(email)) {
-                user.depositChecking(amount);
-            }
-        }
+        UserAccount u = accountList.get(indexMap.get(email));
+        u.depositChecking(amount);
     }
 
-    // FIX ME!!! -- bad worst case runtime, should replace with a HashMap of <email, ArrayList index>
     public void depositSavings(String email, double amount) {
-        for (UserAccount user : accountList) {
-            if (user.getEmail().equals(email)) {
-                user.depositSavings(amount);
-            }
-        }
+        UserAccount u = accountList.get(indexMap.get(email));
+        u.depositSavings(amount);
     }
 
-    // FIX ME!!! -- Replace for loop with HashMap<email, ArrayList index>
     public UserAccount getUser(String email) {
-        for (UserAccount user : accountList) {
-            if (user.getEmail().equals(email)) {
-                return user;
-            }
-        }
-        return null;
+        UserAccount u = accountList.get(indexMap.get(email));
+        return u;
     }
 }

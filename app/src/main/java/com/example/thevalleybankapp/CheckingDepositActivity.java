@@ -9,8 +9,6 @@ import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.text.NumberFormat;
-
 public class CheckingDepositActivity extends AppCompatActivity {
     EditText depositText;
     Button chDeposit, chGoBack;
@@ -60,10 +58,7 @@ public class CheckingDepositActivity extends AppCompatActivity {
         depositText.addTextChangedListener(textWatcher);
 
         chDeposit.setOnClickListener(v -> {
-            if (depositText.getText().toString().equals("")) {
-                // do nothing
-            }
-            else {
+            if (!depositText.getText().toString().equals("")) { // if amount isn't empty
                 double deposit = Double.parseDouble(depositText.getText().toString());
                 MainActivity.AM.depositChecking(email, deposit);
             }
