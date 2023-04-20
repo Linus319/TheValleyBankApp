@@ -61,7 +61,8 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         loginButton.setOnClickListener(v -> {
-            loginIntent.putExtra("com.example.thevalleybankapp.accountEmail", etEmail.getText().toString());
+            String email = etEmail.getText().toString();
+            loginIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
             startActivity(loginIntent);
         });
 
