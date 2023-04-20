@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrencyConverter">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/DarkOrange">
+
+        <TextView
+            android:id="@+id/CurrencyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:background="@color/DarkOrange"
+            android:text="Currency Converter" />
+
+        <TextView
+            android:id="@+id/USDMx"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:text="USD:        MX:    " />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
