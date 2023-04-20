@@ -8,20 +8,25 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CreateAccountActivity extends AppCompatActivity {
-
-//    { DatabaseHelper.EMAIL, DatabaseHelper.PASSWORD,
-//      DatabaseHelper.PHONE, DatabaseHelper.FIRST_NAME, DatabaseHelper.LAST_NAME,
-//      DatabaseHelper.DOB, DatabaseHelper.ZIP };
-
 
     EditText etEmail, etPassword, etPhone, etFirst, etLast, etDOB, etZip;
     EditText firstEmail, firstPass;
 
     Button submitButton;
+
+    private boolean isEmailValid(String email)
+    {
+        final String EMAIL_PATTERN =
+                "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        final Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        final Matcher matcher = pattern.matcher(email);
+
+        return matcher.matches();
+    }
 
 
     TextWatcher textWatcher = new TextWatcher() {
@@ -32,7 +37,8 @@ public class CreateAccountActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            boolean allFieldsFull, passwordIsValid = false, passwordsMatch = false, emailsMatch = false;
+            boolean allFieldsFull, passwordIsValid = false, passwordsMatch = false, emailsMatch = false,
+                    emailUnique = false, emailIsValid;
 
             String newEmail = etEmail.getText().toString();
             String newPassword = etPassword.getText().toString();
@@ -64,11 +70,17 @@ public class CreateAccountActivity extends AppCompatActivity {
                 emailsMatch = true;
             }
 
-            // FIX ME: check that email and phone number are unique
+            // check that email and phone number are unique
+            if (!MainActivity.AM.emailExists(newEmail)) {
+                emailUnique = true;
+            }
 
-            submitButton.setEnabled(allFieldsFull && passwordsMatch && passwordIsValid && emailsMatch);
+            // check if email is valid
+            emailIsValid = isEmailValid(newEmail);
 
 
+            submitButton.setEnabled(allFieldsFull && passwordsMatch && passwordIsValid
+                    && emailsMatch && emailUnique && emailIsValid);
         }
 
         @Override
@@ -123,13 +135,7 @@ public class CreateAccountActivity extends AppCompatActivity {
             // add user to account manager
             MainActivity.AM.addUser(newUser);
 
-//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newEmail", newEmail);
-//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newPassword", newPassword);
-//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newPhone", newPhone);
             confirmUserIntent.putExtra("com.example.thevalleybankapp.newFirstName", newFirstName);
-//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newLastName", newLastName);
-//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newDOB", newDOB);
-//            confirmUserIntent.putExtra("com.example.thevalleybankapp.newZip", newZip);
 
             startActivity(confirmUserIntent);
         });

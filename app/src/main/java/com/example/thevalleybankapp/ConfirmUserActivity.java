@@ -21,13 +21,7 @@ public class ConfirmUserActivity extends AppCompatActivity {
 
         Intent confirmIntent = getIntent();
 
-//        String newEmail = confirmIntent.getStringExtra("com.example.thevalleybankapp.newEmail");
-//        String newPassword = confirmIntent.getStringExtra("com.example.thevalleybankapp.newPassword");
-//        String newPhone = confirmIntent.getStringExtra("com.example.thevalleybankapp.newPhone");
         String newFirstName = confirmIntent.getStringExtra("com.example.thevalleybankapp.newFirstName");
-//        String newLastName = confirmIntent.getStringExtra("com.example.thevalleybankapp.newLastName");
-//        String newDOB = confirmIntent.getStringExtra("com.example.thevalleybankapp.newDOB");
-//        String newZip = confirmIntent.getStringExtra("com.example.thevalleybankapp.newZip");
 
         confirmText.setText("Welcome, " + newFirstName + "!");
 
