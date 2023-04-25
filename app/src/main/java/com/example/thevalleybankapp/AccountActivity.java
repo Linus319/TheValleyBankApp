@@ -17,6 +17,7 @@ public class AccountActivity extends AppCompatActivity {
         Button signOutButton = findViewById(R.id.signOutButton);
         Button bCheckingDeposit = findViewById(R.id.checkingDeposit);
         Button bSavingsDeposit = findViewById(R.id.savingsDeposit);
+        Button bConvert = findViewById(R.id.convertCurrencyButton);
 
         Intent thisIntent = getIntent();
         String email = thisIntent.getStringExtra("com.example.thevalleybankapp.accountEmail");
@@ -32,6 +33,7 @@ public class AccountActivity extends AppCompatActivity {
         Intent logOutIntent = new Intent(this, MainActivity.class);
         Intent depositCheckingIntent = new Intent(this, CheckingDepositActivity.class);
         Intent depositSavingsIntent = new Intent(this, SavingsDepositActivity.class);
+        Intent convertCurrencyIntent = new Intent(this, ConvertActivity.class);
 
         signOutButton.setOnClickListener(v -> {
             startActivity(logOutIntent);
@@ -45,6 +47,11 @@ public class AccountActivity extends AppCompatActivity {
         bSavingsDeposit.setOnClickListener(v -> {
             depositSavingsIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
             startActivity(depositSavingsIntent);
+        });
+
+        bConvert.setOnClickListener(v -> {
+            convertCurrencyIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+            startActivity(convertCurrencyIntent);
         });
     }
 }
