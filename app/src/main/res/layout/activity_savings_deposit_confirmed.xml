@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="18sp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/orangeM">
 
     <Space
         android:layout_width="match_parent"
@@ -27,6 +28,8 @@
         android:id="@+id/svConfirmGoBackButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back To Account" />
+        android:text="Back To Account"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/DarkOrange"/>
 
 </LinearLayout>
