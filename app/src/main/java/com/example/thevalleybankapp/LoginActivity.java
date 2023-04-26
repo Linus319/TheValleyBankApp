@@ -56,9 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent returnHomeIntent = new Intent(this, MainActivity.class);
         Intent loginIntent = new Intent(this, AccountActivity.class);
 
-        returnHome.setOnClickListener(v -> {
-            startActivity(returnHomeIntent);
-        });
+        returnHome.setOnClickListener(v -> startActivity(returnHomeIntent));
 
         loginButton.setOnClickListener(v -> {
             String email = etEmail.getText().toString();

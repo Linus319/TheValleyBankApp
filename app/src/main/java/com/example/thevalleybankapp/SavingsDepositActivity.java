@@ -68,8 +68,6 @@ public class SavingsDepositActivity extends AppCompatActivity {
             startActivity(savingsDepositIntent);
         });
 
-        svGoBack.setOnClickListener(v -> {
-            startActivity(savingsGoBackIntent);
-        });
+        svGoBack.setOnClickListener(v -> startActivity(savingsGoBackIntent));
     }
 }

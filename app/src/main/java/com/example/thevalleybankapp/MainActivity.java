@@ -21,13 +21,9 @@ public class MainActivity extends AppCompatActivity {
         Intent loginView = new Intent(this, LoginActivity.class);
         Intent createAccountView = new Intent(this, CreateAccountActivity.class);
 
-        loginButton.setOnClickListener(v -> {
-            startActivity(loginView);
-        });
+        loginButton.setOnClickListener(v -> startActivity(loginView));
 
-        createAccountButton.setOnClickListener(v -> {
-            startActivity(createAccountView);
-        });
+        createAccountButton.setOnClickListener(v -> startActivity(createAccountView));
     }
 
 
