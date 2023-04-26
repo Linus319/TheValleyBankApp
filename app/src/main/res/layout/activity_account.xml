@@ -28,7 +28,9 @@
             android:layout_marginHorizontal="6dp"
             android:layout_weight="1"
             android:text="Transfer Funds"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/orangeM"/>
 
         <Button
             android:id="@+id/sendRequestButton"
@@ -37,7 +39,9 @@
             android:layout_marginHorizontal="6dp"
             android:layout_weight="1"
             android:text="Send / Request"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/orangeM"/>
 
         <Button
             android:id="@+id/convertCurrencyButton"
@@ -46,7 +50,9 @@
             android:layout_marginHorizontal="6dp"
             android:layout_weight="1"
             android:text="Convert Currency"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/orangeM"/>
 
     </LinearLayout>
 
@@ -95,7 +101,9 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
-                android:text="Deposit" />
+                android:text="Deposit"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orangeM"/>
 
             <Button
                 android:id="@+id/checkingTransactions"
@@ -103,7 +111,9 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
-                android:text="Transaction History" />
+                android:text="Transaction History"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orangeM"/>
 
         </LinearLayout>
 
@@ -158,7 +168,9 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
-                android:text="Deposit" />
+                android:text="Deposit"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orangeM"/>
 
             <Button
                 android:id="@+id/savingsTransactions"
@@ -166,7 +178,9 @@
                 android:layout_height="match_parent"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
-                android:text="Transaction History" />
+                android:text="Transaction History"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orangeM"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -177,6 +191,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="96dp"
         android:layout_marginVertical="12dp"
-        android:text="Sign Out" />
+        android:text="Sign Out"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/orangeM"/>
 
 </LinearLayout>
