@@ -20,7 +20,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
-        android:background="@color/DarkGreen"/>
+        android:background="@color/DarkOrange"/>
 
     <TextView
         android:id="@+id/userText"
@@ -30,7 +30,7 @@
         android:text="Username:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:background="@color/DarkGreen"/>
+        android:background="@color/DarkOrange"/>
 
     <EditText
         android:id="@+id/enterUsername"
@@ -51,7 +51,7 @@
         android:text="Password:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:background="@color/DarkGreen"/>
+        android:background="@color/DarkOrange"/>
 
     <EditText
         android:id="@+id/enterPassword"
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text="Log In"
         android:textColor="@color/black"
-        android:backgroundTint="@color/DarkGreen"/>
+        android:backgroundTint="@color/DarkOrange"/>
 
     <Button
         android:id="@+id/homeButton"
@@ -77,6 +77,6 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:text="Home"
-        android:backgroundTint="@color/DarkGreen"/>
+        android:backgroundTint="@color/DarkOrange"/>
 
 </LinearLayout>
