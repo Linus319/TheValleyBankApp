@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="18dp"
     android:layout_weight="1"
+    android:background="@color/orangeM"
     android:orientation="vertical"
     >
 
@@ -29,6 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/DarkOrange"
+
         >
 
         <TextView
@@ -64,7 +67,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Deposit" />
+        android:text="Deposit"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/DarkOrange"
+        />
 
     <Space
         android:layout_width="match_parent"
@@ -75,5 +81,13 @@
         android:id="@+id/chGoBackButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go Back" />
+        android:text="Go Back"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/DarkOrange"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@color/orangeM"
+        android:orientation="vertical"></LinearLayout>
 </LinearLayout>
