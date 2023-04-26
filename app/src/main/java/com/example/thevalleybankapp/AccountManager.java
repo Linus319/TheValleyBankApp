@@ -32,32 +32,46 @@ public class AccountManager {
     }
 
     public String getFirstName(String email) {
-        UserAccount u = accountList.get(indexMap.get(email));
-        return u.getFirstName();
+        if (indexMap.get(email) != null) {
+            UserAccount u = accountList.get(indexMap.get(email));
+            return u.getFirstName();
+        }
+        return null;
     }
 
     public String getCheckingBalance(String email) {
-        UserAccount u = accountList.get(indexMap.get(email));
-        return u.getCheckingBalance();
+        if (indexMap.get(email) != null) {
+            UserAccount u = accountList.get(indexMap.get(email));
+            return u.getCheckingBalance();
+        }
+        return null;
     }
 
     public String getSavingsBalance(String email) {
-        UserAccount u = accountList.get(indexMap.get(email));
-        return u.getSavingsBalance();
+        if (indexMap.get(email) != null) {
+            UserAccount u = accountList.get(indexMap.get(email));
+            return u.getSavingsBalance();
+        }
+        return null;
     }
 
     public void depositChecking(String email, double amount) {
-        UserAccount u = accountList.get(indexMap.get(email));
-        u.depositChecking(amount);
+        if (indexMap.get(email) != null) {
+            UserAccount u = accountList.get(indexMap.get(email));
+            u.depositChecking(amount);
+        }
     }
 
     public void depositSavings(String email, double amount) {
-        UserAccount u = accountList.get(indexMap.get(email));
-        u.depositSavings(amount);
+        if (indexMap.get(email) != null) {
+            UserAccount u = accountList.get(indexMap.get(email));
+            u.depositSavings(amount);
+        }
     }
 
-    public UserAccount getUser(String email) {
-        UserAccount u = accountList.get(indexMap.get(email));
-        return u;
+    public boolean emailExists(String email) {
+        return indexMap.get(email) != null;
     }
+
+
 }

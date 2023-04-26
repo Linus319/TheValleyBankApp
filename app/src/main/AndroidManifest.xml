@@ -12,6 +12,9 @@
         android:theme="@style/Theme.TheValleyBankApp"
         tools:targetApi="31">
         <activity
+            android:name=".ConvertActivity"
+            android:exported="false" />
+        <activity
             android:name=".CheckingDepositConfirmedActivity"
             android:exported="false" />
         <activity

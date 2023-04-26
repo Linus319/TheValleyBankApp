@@ -5,13 +5,13 @@ import java.text.NumberFormat;
 public class UserAccount {
     private double checkingBalance;
     private double savingsBalance;
-    private String email;
-    private String password;
-    private String phone;
-    private String firstName;
-    private String lastName;
-    private String dob;
-    private String zip;
+    private final String email;
+    private final String password;
+    private final String phone;
+    private final String firstName;
+    private final String lastName;
+    private final String dob;
+    private final String zip;
 
     public UserAccount(String newEmail, String newPassword, String newPhone, String newFirstName, String newLastName, String newDOB, String newZip) {
         email = newEmail;
