@@ -46,7 +46,7 @@ public class ConvertActivity extends AppCompatActivity {
 
                 if ((spi1.getSelectedItem().toString() == "USD" && spi2.getSelectedItem().toString() == "USD") || (spi1.getSelectedItem().toString() == "MXN" && spi2.getSelectedItem().toString() == "MXN")){
                     conv = fromAmt;
-                    txtResult.setText("$ "+conv);
+                    txtResult.setText("$ " + conv);
                 }
 
                 else if (spi1.getSelectedItem().toString() == "MXN" && spi2.getSelectedItem().toString() == "USD"){
