@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orangeM">
+
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Transfer Funds"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@color/orangeM"/>
+
+
+    <LinearLayout
+        android:id="@+id/accounts_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/checkings_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkings: $0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/DarkOrange"/>
+
+        <EditText
+            android:id="@+id/checkings_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:background="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/savings_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Savings: $0.00"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/DarkOrange"
+            />
+
+        <EditText
+            android:id="@+id/savings_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/transfer_amount_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accounts_box"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Transfer Amount"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@color/DarkOrange"/>
+
+        <EditText
+            android:id="@+id/transfer_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/transfer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/transfer_amount_box"
+        android:text="Transfer"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/DarkOrange"/>
+
+</RelativeLayout>
