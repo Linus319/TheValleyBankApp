@@ -102,10 +102,10 @@
         android:background="@color/orangeM"
         />
 
-    <Spinner
-        android:id="@+id/chooseSendReceive"
-        android:layout_width="match_parent"
-        android:layout_height="166dp"
-        android:background="@color/white" />
+<!--    <Spinner-->
+<!--        android:id="@+id/chooseSendReceive"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="166dp"-->
+<!--        android:background="@color/white" />-->
 
 </LinearLayout>
