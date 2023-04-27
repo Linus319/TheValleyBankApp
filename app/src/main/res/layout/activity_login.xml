@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="48dp"
-        android:background="@color/DarkGreen" />
+        android:background="@color/orangeM" />
 
     <TextView
         android:id="@+id/loginView"
@@ -30,7 +30,7 @@
         android:text="Username:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:background="@color/DarkOrange"/>
+        android:background="@color/orangeM"/>
 
     <EditText
         android:id="@+id/enterUsername"
@@ -51,7 +51,8 @@
         android:text="Password:"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:background="@color/DarkOrange"/>
+        android:background="@color/orangeM"
+        />
 
     <EditText
         android:id="@+id/enterPassword"
@@ -69,7 +70,7 @@
         android:layout_height="wrap_content"
         android:text="Log In"
         android:textColor="@color/black"
-        android:backgroundTint="@color/DarkOrange"/>
+        android:backgroundTint="@color/orangeM"/>
 
     <Button
         android:id="@+id/homeButton"
@@ -77,6 +78,6 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:text="Home"
-        android:backgroundTint="@color/DarkOrange"/>
+        android:backgroundTint="@color/orangeM"/>
 
 </LinearLayout>

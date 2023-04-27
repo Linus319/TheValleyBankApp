@@ -27,7 +27,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="@color/DarkOrange"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,7 +42,7 @@
                     android:text="Full Name:"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:background="@color/DarkOrange"/>
+                    android:background="@color/orangeM"/>
 
                 <LinearLayout
                     android:id="@+id/nameLayout"
@@ -58,7 +59,8 @@
                         android:ems="10"
                         android:hint="First Name"
                         android:inputType="textPersonName"
-                        android:background="@color/white"/>
+                        android:background="@color/white"
+                        />
 
                     <EditText
                         android:id="@+id/enterLastName"
@@ -91,7 +93,8 @@
                         android:layout_weight="1"
                         android:text="Date of Birth:"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:background="@color/orangeM"/>
 
                     <EditText
                         android:id="@+id/enterDOB"
@@ -118,7 +121,8 @@
                         android:layout_weight="1"
                         android:text="Zip Code:"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:background="@color/orangeM"/>
 
                     <EditText
                         android:id="@+id/enterZip"
@@ -144,7 +148,8 @@
                     android:layout_height="wrap_content"
                     android:text="Phone Number:"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:background="@color/orangeM"/>
 
                 <EditText
                     android:id="@+id/editTextPhone"
@@ -162,7 +167,8 @@
                     android:layout_height="wrap_content"
                     android:text="Email:"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:background="@color/orangeM"/>
 
                 <EditText
                     android:id="@+id/enterEmail"
@@ -190,13 +196,15 @@
                     android:text="Password:"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    tools:text="Password:" />
+                    tools:text="Password:"
+                    android:background="@color/orangeM"/>
 
                 <TextView
                     android:id="@+id/passMin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="(minimum 12 characters)" />
+                    android:text="(minimum 12 characters)"
+                    android:background="@color/orangeM"/>
 
                 <EditText
                     android:id="@+id/enterPass"
@@ -224,7 +232,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="12dp"
                 android:text="Create Account"
-                android:backgroundTint="@color/DarkOrange"/>
+                android:textColor="@color/black"
+                android:backgroundTint="@color/orangeM"/>
 
             <Space
                 android:layout_width="match_parent"
