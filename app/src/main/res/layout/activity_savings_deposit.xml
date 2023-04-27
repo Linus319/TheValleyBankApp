@@ -3,11 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="18dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/orangeM">
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="128dp" />
+        android:layout_height="128dp"
+        />
 
     <TextView
         android:id="@+id/savingsDepositTitle"
@@ -17,7 +19,8 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <Space
         android:layout_width="match_parent"
@@ -26,7 +29,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/DarkOrange"
+        >
 
         <TextView
             android:id="@+id/svDepositText"
@@ -35,7 +40,8 @@
             android:layout_weight="1"
             android:text="Deposit Amount: "
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:background="@color/DarkOrange"/>
 
         <EditText
             android:id="@+id/svEnterDeposit"
@@ -58,7 +64,9 @@
         android:id="@+id/svDepositButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Deposit" />
+        android:text="Deposit"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/DarkOrange"/>
 
     <Space
         android:layout_width="match_parent"
@@ -68,5 +76,7 @@
         android:id="@+id/svGoBackButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go Back" />
+        android:text="Go Back"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/DarkOrange"/>
 </LinearLayout>

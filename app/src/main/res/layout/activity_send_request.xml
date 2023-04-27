@@ -25,6 +25,7 @@
         android:text="Email / Username:"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:background="@color/orangeM"
         />
 
     <EditText
@@ -43,7 +44,8 @@
         android:text="OR"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        />
 
     <TextView
         android:id="@+id/promptUserPhone"
@@ -51,7 +53,8 @@
         android:layout_height="wrap_content"
         android:text="Phone #:"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:background="@color/orangeM"/>
 
     <EditText
         android:id="@+id/enterUserPhone"
@@ -72,7 +75,8 @@
         android:layout_height="wrap_content"
         android:text="Message (Optional):"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:background="@color/orangeM"/>
 
     <EditText
         android:id="@+id/enterMessage"
@@ -95,6 +99,7 @@
         android:text="Send or Receive?"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:background="@color/orangeM"
         />
 
     <Spinner
