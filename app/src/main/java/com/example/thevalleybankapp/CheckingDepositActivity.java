@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class CheckingDepositActivity extends AppCompatActivity {
-    EditText depositText;
+    EditText chDepositText;
     Button chDeposit, chGoBack;
 
     TextWatcher textWatcher = new TextWatcher() {
@@ -22,11 +22,11 @@ public class CheckingDepositActivity extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if (depositText.getText().toString().equals("")) {
+            if (chDepositText.getText().toString().equals("")) {
                 return;
             }
 
-            double amount = Double.parseDouble(depositText.getText().toString());
+            double amount = Double.parseDouble(chDepositText.getText().toString());
 
             if (amount > 0) {
                 chDeposit.setEnabled(true);
@@ -54,12 +54,12 @@ public class CheckingDepositActivity extends AppCompatActivity {
         Intent checkingDepositIntent = new Intent(this, CheckingDepositConfirmedActivity.class);
         Intent checkingGoBackIntent = new Intent(this, AccountActivity.class);
 
-        depositText = findViewById(R.id.chEnterDeposit);
-        depositText.addTextChangedListener(textWatcher);
+        chDepositText = findViewById(R.id.chEnterDeposit);
+        chDepositText.addTextChangedListener(textWatcher);
 
         chDeposit.setOnClickListener(v -> {
-            if (!depositText.getText().toString().equals("")) { // if amount isn't empty
-                double deposit = Double.parseDouble(depositText.getText().toString());
+            if (!chDepositText.getText().toString().equals("")) {
+                double deposit = Double.parseDouble(chDepositText.getText().toString());
                 MainActivity.AM.depositChecking(email, deposit);
             }
 

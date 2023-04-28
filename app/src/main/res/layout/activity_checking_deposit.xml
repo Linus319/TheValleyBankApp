@@ -66,11 +66,9 @@
         android:id="@+id/chDepositButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Deposit"
-        android:textColor="@color/black"
         android:backgroundTint="@color/DarkOrange"
-        />
+        android:text="Deposit"
+        android:textColor="@color/black" />
 
     <Space
         android:layout_width="match_parent"
