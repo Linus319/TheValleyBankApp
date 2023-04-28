@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class AccountManager {
-    private ArrayList<UserAccount> accountList = new ArrayList<UserAccount>();
-    private HashMap<String, String> validationMap = new HashMap<String, String>(); // <email, password>
+    private ArrayList<UserAccount> accountList = new ArrayList<>();
+    private HashMap<String, String> validationMap = new HashMap<>(); // <email, password>
     private HashMap<String, Integer> indexMap = new HashMap<>(); // <email, accountList[index]>
 
     public AccountManager() {
