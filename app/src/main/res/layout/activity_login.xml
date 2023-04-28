@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginHorizontal="12dp"
-    android:background="@color/DarkOrange">
+    android:background="@color/DarkOrange"
+    android:theme="@android:style/Theme.NoTitleBar" >
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
