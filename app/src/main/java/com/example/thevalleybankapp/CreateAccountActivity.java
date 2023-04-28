@@ -16,7 +16,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     EditText etEmail, etPassword, etPhone, etFirst, etLast, etDOB, etZip;
     EditText firstEmail, firstPass;
 
-    Button submitButton;
+    Button submitButton, backButton;
 
     private boolean isEmailValid(String email)
     {
@@ -97,6 +97,8 @@ public class CreateAccountActivity extends AppCompatActivity {
         submitButton = (Button) findViewById(R.id.createAccountButton);
         submitButton.setEnabled(false);
 
+        backButton = (Button) findViewById(R.id.superHomeButton);
+
         etEmail = (EditText) findViewById(R.id.confirmEmail);
         etPassword = (EditText) findViewById(R.id.confirmPass);
         etPhone = (EditText) findViewById(R.id.editTextPhone);
@@ -119,6 +121,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
         // make intent to pass to button listener
         Intent confirmUserIntent = new Intent(this, ConfirmUserActivity.class);
+        Intent goBack = new Intent(this, MainActivity.class);
 
         submitButton.setOnClickListener(v -> {
             String newEmail = etEmail.getText().toString();
@@ -138,6 +141,10 @@ public class CreateAccountActivity extends AppCompatActivity {
             confirmUserIntent.putExtra("com.example.thevalleybankapp.newFirstName", newFirstName);
 
             startActivity(confirmUserIntent);
+        });
+
+        backButton.setOnClickListener(v -> {
+            startActivity(goBack);
         });
     }
 }

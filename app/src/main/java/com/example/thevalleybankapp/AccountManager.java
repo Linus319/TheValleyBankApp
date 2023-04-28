@@ -39,6 +39,10 @@ public class AccountManager {
         return null;
     }
 
+    public UserAccount getUser(String email) {
+        return accountList.get(indexMap.get(email));
+    }
+
     public String getCheckingBalance(String email) {
         if (indexMap.get(email) != null) {
             UserAccount u = accountList.get(indexMap.get(email));
@@ -53,6 +57,16 @@ public class AccountManager {
             return u.getSavingsBalance();
         }
         return null;
+    }
+
+    public double getCheckingVal(String email) {
+        UserAccount u = accountList.get(indexMap.get(email));
+        return u.getCheckingVal();
+    }
+
+    public double getSavingsVal(String email) {
+        UserAccount u = accountList.get(indexMap.get(email));
+        return u.getSavingsVal();
     }
 
     public void depositChecking(String email, double amount) {
@@ -72,6 +86,19 @@ public class AccountManager {
     public boolean emailExists(String email) {
         return indexMap.get(email) != null;
     }
+
+    public void updateUserChecking(String email, double amount) {
+        int index = indexMap.get(email);
+        UserAccount user = accountList.get(index);
+        user.newCheckingTransaction("PLACEHOLDER", "PLACEHOLDER", amount);
+    }
+
+    public void updateUserSavings(String email, double amount) {
+        int index = indexMap.get(email);
+        UserAccount user = accountList.get(index);
+        user.newSavingsTransaction("PLACEHOLDER", "PLACEHOLDER", amount);
+    }
+
 
 
 }

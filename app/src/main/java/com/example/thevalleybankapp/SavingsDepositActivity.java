@@ -68,6 +68,8 @@ public class SavingsDepositActivity extends AppCompatActivity {
             startActivity(savingsDepositIntent);
         });
 
-        svGoBack.setOnClickListener(v -> startActivity(savingsGoBackIntent));
-    }
+        svGoBack.setOnClickListener(v -> {
+            savingsGoBackIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+            startActivity(savingsGoBackIntent);
+        });}
 }

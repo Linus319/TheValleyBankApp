@@ -12,6 +12,9 @@
         android:theme="@style/Theme.TheValleyBankApp"
         tools:targetApi="31">
         <activity
+            android:name=".CheckingTransactionActivity"
+            android:exported="false" />
+        <activity
             android:name=".TransferFunds"
             android:exported="false">
             <meta-data

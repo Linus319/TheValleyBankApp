@@ -68,6 +68,7 @@ public class CheckingDepositActivity extends AppCompatActivity {
         });
 
         chGoBack.setOnClickListener(v -> {
+            checkingGoBackIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
             startActivity(checkingGoBackIntent);
         });
     }

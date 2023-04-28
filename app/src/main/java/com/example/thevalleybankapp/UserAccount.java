@@ -1,8 +1,12 @@
 package com.example.thevalleybankapp;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 public class UserAccount {
+
+    private ArrayList<Transaction> checkingHistory = new ArrayList<>();
+    private ArrayList<Transaction> savingsHistory = new ArrayList<>();
     private double checkingBalance;
     private double savingsBalance;
     private final String email;
@@ -46,11 +50,39 @@ public class UserAccount {
         return formatter.format(savingsBalance);
     }
 
+    public double getCheckingVal() {
+        return checkingBalance;
+    }
+
+    public double getSavingsVal() {
+        return savingsBalance;
+    }
+
     public void depositChecking(double deposit) {
         checkingBalance += deposit;
     }
 
     public void depositSavings(double deposit) {
         savingsBalance += deposit;
+    }
+
+    public void newCheckingTransaction(String message, String transType, double amount) {
+        checkingBalance += amount;
+        Transaction t = new Transaction(message, transType, amount, savingsBalance);
+        checkingHistory.add(t);
+    }
+
+    public void newSavingsTransaction(String message, String transType, double amount) {
+        savingsBalance += amount;
+        Transaction t = new Transaction(message, transType, amount, savingsBalance);
+        savingsHistory.add(t);
+    }
+
+    public ArrayList<Transaction> getCheckingHistory() {
+        return checkingHistory;
+    }
+
+    public ArrayList<Transaction> getSavingsHistory() {
+        return savingsHistory;
     }
 }
