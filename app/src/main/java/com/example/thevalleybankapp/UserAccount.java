@@ -85,4 +85,5 @@ public class UserAccount {
     public ArrayList<Transaction> getSavingsHistory() {
         return savingsHistory;
     }
+
 }
