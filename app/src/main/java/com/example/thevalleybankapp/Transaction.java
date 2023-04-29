@@ -23,7 +23,7 @@ public class Transaction {
         userBalance = svBalance;
     }
 
-    public String toTransactionString() {
+    public String toTransactionString(Transaction t) {
         NumberFormat formatter = NumberFormat.getCurrencyInstance();
         String result = (transDate + " " + transMessage + " " + transType + " " + formatter.format(transAmount) + " " + formatter.format(userBalance));
         return result;

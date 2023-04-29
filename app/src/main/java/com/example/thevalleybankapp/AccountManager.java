@@ -99,6 +99,16 @@ public class AccountManager {
         user.newSavingsTransaction("PLACEHOLDER", "PLACEHOLDER", amount);
     }
 
+    public ArrayList<Transaction> getCheckingHistory(String email) {
+        UserAccount u = MainActivity.AM.getUser(email);
+        return u.getCheckingHistory();
+    }
+
+    public ArrayList<Transaction> getSavingsHistory(String email) {
+        UserAccount u = MainActivity.AM.getUser(email);
+        return u.getSavingsHistory();
+    }
+
 
 
 }
