@@ -58,6 +58,15 @@ public class UserAccount {
         return savingsBalance;
     }
 
+    public void setCheckingVal(double checkingBalance) {
+        this.checkingBalance = checkingBalance;
+    }
+
+    public void setSavingsVal(double savingsBalance) {
+        this.savingsBalance = savingsBalance;
+    }
+
+
     public void depositChecking(double deposit) {
         checkingBalance += deposit;
     }
