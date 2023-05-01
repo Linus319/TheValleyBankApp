@@ -13,8 +13,8 @@ import java.util.List;
 public class CheckingTransactionActivity extends AppCompatActivity {
 
     ListView listView;
-    ArrayList chTransList;
-    List chList = new ArrayList<String>();
+    ArrayList chTransList; //hasp map;
+//    List chList = new ArrayList<String>();
     ArrayAdapter adapter;
 
     @Override
@@ -25,9 +25,9 @@ public class CheckingTransactionActivity extends AppCompatActivity {
         Intent thisIntent = getIntent();
         String email = thisIntent.getStringExtra("com.example.thevalleybankapp.accountEmail");
 
-        listView = (ListView) findViewById(R.id.chTransList);
+        // listView = (ListView) findViewById(R.id.chTransList);
 
-        chTransList = MainActivity.AM.getUser(email).getCheckingHistory();
+        List chList = MainActivity.AM.getUser(email).getCheckingHistory();
 
         for (int i = 0; i < chTransList.size(); i++) {
             chList.add(chTransList.get(i));

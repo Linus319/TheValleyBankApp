@@ -30,36 +30,49 @@ public class TransferFunds extends AppCompatActivity {
         transferAmountEditText = findViewById(R.id.transfer_amount);
 
         Button transfer_button = findViewById(R.id.transfer_button);
-        transfer_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                performTransfer();
-            }
+
+        Intent toAccountIntent = new Intent(this, AccountActivity.class);
+
+        transfer_button.setOnClickListener(v -> {
+            double transferAmount = Double.parseDouble(transferAmountEditText.getText().toString());
+
+            MainActivity.AM.updateUserChecking(email, (-1 * transferAmount));
+            MainActivity.AM.updateUserSavings(email, transferAmount);
+
+            toAccountIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+            startActivity(toAccountIntent);
         });
+
+//        transfer_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                performTransfer();
+//            }
+//        });
     }
 
-    public void setCheckingVal(double checkingBalance) {
-        this.checkings_amount = checkings_amount;
-    }
+//    public void setCheckingVal(double checkingBalance) {
+//        this.checkings_amount = checkings_amount;
+//    }
+//
+//    public void setSavingsVal(double savingsBalance) {
+//        this.savings_amount = savings_amount;
+//    }
 
-    public void setSavingsVal(double savingsBalance) {
-        this.savings_amount = savings_amount;
-    }
 
-
-    private void performTransfer() {
-        double transferAmount = Double.parseDouble(transferAmountEditText.getText().toString());
-        double savingsAmount = Double.parseDouble(savings_amount.getText().toString());
-        double checkingsAmount = Double.parseDouble(checkings_amount.getText().toString());
-
-      checkingsAmount -= transferAmount;
-
-        checkings_amount.setText(String.valueOf(checkingsAmount));
-
-        savingsAmount += transferAmount;
-        savings_amount.setText(String.valueOf(savingsAmount));
-
-        transferAmountEditText.setText("");
-    }
+//    private void performTransfer() {
+//        double transferAmount = Double.parseDouble(transferAmountEditText.getText().toString());
+//        double savingsAmount = Double.parseDouble(savings_amount.getText().toString());
+//        double checkingsAmount = Double.parseDouble(checkings_amount.getText().toString());
+//
+//        checkingsAmount -= transferAmount;
+//
+//        checkings_amount.setText(String.valueOf(checkingsAmount));
+//
+//        savingsAmount += transferAmount;
+//        savings_amount.setText(String.valueOf(savingsAmount));
+//
+//        transferAmountEditText.setText("");
+//    }
 
 }
