@@ -63,9 +63,9 @@ public class AccountActivity extends AppCompatActivity {
             startActivity(convertCurrencyIntent);
         });
 
-        checkingHistory.setOnClickListener(v -> {
-            checkingTransIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
-            startActivity(checkingTransIntent);
-        });
+//        checkingHistory.setOnClickListener(v -> {
+//            checkingTransIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+//            startActivity(checkingTransIntent);
+//        });
     }
 }

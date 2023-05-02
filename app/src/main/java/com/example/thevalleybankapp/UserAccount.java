@@ -69,10 +69,14 @@ public class UserAccount {
 
     public void depositChecking(double deposit) {
         checkingBalance += deposit;
+        Transaction t = new Transaction("", "Deposit", deposit, checkingBalance);
+        checkingHistory.add(t);
     }
 
     public void depositSavings(double deposit) {
         savingsBalance += deposit;
+        Transaction t = new Transaction("", "Deposit", deposit, savingsBalance);
+        savingsHistory.add(t);
     }
 
     public void newCheckingTransaction(String message, String transType, double amount) {
