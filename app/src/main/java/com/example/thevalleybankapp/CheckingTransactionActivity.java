@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +13,9 @@ import java.util.List;
 
 public class CheckingTransactionActivity extends AppCompatActivity {
 
-    ListView listView;
-    ArrayList chTransList; //hasp map;
-//    List chList = new ArrayList<String>();
-    ArrayAdapter adapter;
+//    ListView listView;
+//    ArrayList chTransList; //hasp map;
+//    ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +25,22 @@ public class CheckingTransactionActivity extends AppCompatActivity {
         Intent thisIntent = getIntent();
         String email = thisIntent.getStringExtra("com.example.thevalleybankapp.accountEmail");
 
+        Button goBack = findViewById(R.id.chTransGoBackButton);
+
+        Intent goBackIntent = new Intent(this, AccountActivity.class);
+
+        goBack.setOnClickListener(v -> {
+            goBackIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+            startActivity(goBackIntent);
+        });
+
         // listView = (ListView) findViewById(R.id.chTransList);
 
-        List chList = MainActivity.AM.getUser(email).getCheckingHistory();
-
-        for (int i = 0; i < chTransList.size(); i++) {
-            chList.add(chTransList.get(i));
-        }
+//        List chList = MainActivity.AM.getUser(email).getCheckingHistory();
+//
+//        for (int i = 0; i < chTransList.size(); i++) {
+//            chList.add(chTransList.get(i));
+//        }
 
 
 //        public Transaction userCheckingHist =
@@ -44,7 +53,7 @@ public class CheckingTransactionActivity extends AppCompatActivity {
 //        list.add("Trans 5");
 //        list.add("Trans 6");
 
-        adapter = new ArrayAdapter(CheckingTransactionActivity.this, android.R.layout.simple_list_item_1,chTransList);
-        listView.setAdapter(adapter);
+//        adapter = new ArrayAdapter(CheckingTransactionActivity.this, android.R.layout.simple_list_item_1,chTransList);
+//        listView.setAdapter(adapter);
     }
 }
