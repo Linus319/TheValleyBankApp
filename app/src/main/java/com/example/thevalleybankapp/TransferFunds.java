@@ -29,7 +29,9 @@ public class TransferFunds extends AppCompatActivity {
 
         transferAmountEditText = findViewById(R.id.transfer_amount);
 
+
         Button transfer_button = findViewById(R.id.transfer_button);
+        Button savingsToCheckings = findViewById(R.id.savingsToCheckings);
 
         Intent toAccountIntent = new Intent(this, AccountActivity.class);
 
@@ -43,27 +45,39 @@ public class TransferFunds extends AppCompatActivity {
             startActivity(toAccountIntent);
         });
 
+
+        savingsToCheckings.setOnClickListener(v -> {
+            double transferAmount = Double.parseDouble(transferAmountEditText.getText().toString());
+
+            MainActivity.AM.updateUserChecking(email, ( transferAmount));
+            MainActivity.AM.updateUserSavings(email, (-1 * transferAmount));
+
+            toAccountIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+            startActivity(toAccountIntent);
+        });
 //        transfer_button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                performTransfer();
 //            }
 //        });
-    }
+//    }
 
-//    public void setCheckingVal(double checkingBalance) {
-//        this.checkings_amount = checkings_amount;
-//    }
-//
-//    public void setSavingsVal(double savingsBalance) {
-//        this.savings_amount = savings_amount;
-//    }
+
 
 
 //    private void performTransfer() {
+//        Intent thisIntent = getIntent();
+//        String email = thisIntent.getStringExtra("com.example.thevalleybankapp.accountEmail");
+//
 //        double transferAmount = Double.parseDouble(transferAmountEditText.getText().toString());
 //        double savingsAmount = Double.parseDouble(savings_amount.getText().toString());
 //        double checkingsAmount = Double.parseDouble(checkings_amount.getText().toString());
+//
+//        Intent toAccountIntent = new Intent(this, AccountActivity.class);
+//
+//        toAccountIntent.putExtra("com.example.thevalleybankapp.accountEmail", email);
+//        startActivity(toAccountIntent);
 //
 //        checkingsAmount -= transferAmount;
 //
@@ -75,4 +89,4 @@ public class TransferFunds extends AppCompatActivity {
 //        transferAmountEditText.setText("");
 //    }
 
-}
+}}

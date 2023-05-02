@@ -101,9 +101,20 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="11dp"
         android:backgroundTint="@color/DarkOrange"
-        android:text="Transfer"
+        android:text="Transfer FROM CHECKINGS TO SAVINGS"
         android:textColor="@color/black"
         android:textSize="16sp" />
 
+    <Button
+        android:id="@+id/savingsToCheckings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transfer_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:backgroundTint="@color/DarkOrange"
+        android:text="Transfer from Savings to Checkings"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
 
 </RelativeLayout>
